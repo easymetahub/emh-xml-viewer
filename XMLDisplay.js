@@ -110,19 +110,19 @@ function ShowXML(xmlHolderElement,RootNode,indent)
 	if (RootNode==null || xmlHolderElement==null) { return false; }
 	var Result  = true;
 	var TagEmptyElement = document.createElement('div');
-	TagEmptyElement.className = 'Element';
+	TagEmptyElement.className = 'Element emh-xml-viewer';
 	TagEmptyElement.style.position = 'relative';
 	TagEmptyElement.style.left = NestingIndent+'px';
 	if (RootNode.childNodes.length==0) { 
-    var ClickableElement = AddTextNode(TagEmptyElement,'','Clickable') ;
+    var ClickableElement = AddTextNode(TagEmptyElement,'','Clickable emh-xml-viewer') ;
     ClickableElement.id = 'div_empty_' + IDCounter;	  
-    AddTextNode(TagEmptyElement,'<','Utility') ;
-    AddTextNode(TagEmptyElement,RootNode.nodeName ,'NodeName') 
+    AddTextNode(TagEmptyElement,'<','Utility emh-xml-viewer') ;
+    AddTextNode(TagEmptyElement,RootNode.nodeName ,'NodeName emh-xml-viewer') 
     for (var i = 0; RootNode.attributes && i < RootNode.attributes.length; ++i) {
       CurrentAttribute  = RootNode.attributes.item(i);
-      AddTextNode(TagEmptyElement,' ' + CurrentAttribute.nodeName ,'AttributeName') ;
-      AddTextNode(TagEmptyElement,'=','Utility') ;
-      AddTextNode(TagEmptyElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue') ;
+      AddTextNode(TagEmptyElement,' ' + CurrentAttribute.nodeName ,'AttributeName emh-xml-viewer') ;
+      AddTextNode(TagEmptyElement,'=','Utility emh-xml-viewer') ;
+      AddTextNode(TagEmptyElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue emh-xml-viewer') ;
     }
     AddTextNode(TagEmptyElement,' />') ;
     xmlHolderElement.appendChild(TagEmptyElement);	
@@ -130,44 +130,44 @@ function ShowXML(xmlHolderElement,RootNode,indent)
 	}
 	else { // mo child nodes
     
-    var ClickableElement = AddTextNode(TagEmptyElement,'+','Clickable') ;
+    var ClickableElement = AddTextNode(TagEmptyElement,'+','Clickable emh-xml-viewer') ;
     ClickableElement.onclick  = function() {ToggleElementVisibility(this); }
     ClickableElement.id = 'div_empty_' + IDCounter;	
 		
-    AddTextNode(TagEmptyElement,'<','Utility') ;
-    AddTextNode(TagEmptyElement,RootNode.nodeName ,'NodeName') 
+    AddTextNode(TagEmptyElement,'<','Utility emh-xml-viewer') ;
+    AddTextNode(TagEmptyElement,RootNode.nodeName ,'NodeName emh-xml-viewer') 
     for (var i = 0; RootNode.attributes && i < RootNode.attributes.length; ++i) {
       CurrentAttribute  = RootNode.attributes.item(i);
-      AddTextNode(TagEmptyElement,' ' + CurrentAttribute.nodeName ,'AttributeName') ;
-      AddTextNode(TagEmptyElement,'=','Utility') ;
-      AddTextNode(TagEmptyElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue') ;
+      AddTextNode(TagEmptyElement,' ' + CurrentAttribute.nodeName ,'AttributeName emh-xml-viewer') ;
+      AddTextNode(TagEmptyElement,'=','Utility emh-xml-viewer') ;
+      AddTextNode(TagEmptyElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue emh-xml-viewer') ;
     }
 
-    AddTextNode(TagEmptyElement,'>  </','Utility') ;
-    AddTextNode(TagEmptyElement,RootNode.nodeName,'NodeName') ;
-    AddTextNode(TagEmptyElement,'>','Utility') ;
+    AddTextNode(TagEmptyElement,'>  </','Utility emh-xml-viewer') ;
+    AddTextNode(TagEmptyElement,RootNode.nodeName,'NodeName emh-xml-viewer') ;
+    AddTextNode(TagEmptyElement,'>','Utility emh-xml-viewer') ;
     xmlHolderElement.appendChild(TagEmptyElement);	
     SetVisibility(TagEmptyElement,false);
     //----------------------------------------------
     
     var TagElement = document.createElement('div');
-    TagElement.className = 'Element';
+    TagElement.className = 'Element emh-xml-viewer';
     TagElement.style.position = 'relative';
     TagElement.style.left = NestingIndent+'px';
-    ClickableElement = AddTextNode(TagElement,'-','Clickable') ;
+    ClickableElement = AddTextNode(TagElement,'-','Clickable emh-xml-viewer') ;
     ClickableElement.onclick  = function() {ToggleElementVisibility(this); }
     ClickableElement.id = 'div_content_' + IDCounter;		
     ++IDCounter;
-    AddTextNode(TagElement,'<','Utility') ;
-    AddTextNode(TagElement,RootNode.nodeName ,'NodeName') ;
+    AddTextNode(TagElement,'<','Utility emh-xml-viewer') ;
+    AddTextNode(TagElement,RootNode.nodeName ,'NodeName emh-xml-viewer') ;
     
     for (var i = 0; RootNode.attributes && i < RootNode.attributes.length; ++i) {
         CurrentAttribute  = RootNode.attributes.item(i);
-        AddTextNode(TagElement,' ' + CurrentAttribute.nodeName ,'AttributeName') ;
-        AddTextNode(TagElement,'=','Utility') ;
-        AddTextNode(TagElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue') ;
+        AddTextNode(TagElement,' ' + CurrentAttribute.nodeName ,'AttributeName emh-xml-viewer') ;
+        AddTextNode(TagElement,'=','Utility emh-xml-viewer') ;
+        AddTextNode(TagElement,'"' + CurrentAttribute.nodeValue + '"','AttributeValue emh-xml-viewer') ;
     }
-    AddTextNode(TagElement,'>','Utility') ;
+    AddTextNode(TagElement,'>','Utility emh-xml-viewer') ;
     TagElement.appendChild(document.createElement('br'));
     var NodeContent = null;
     for (var i = 0; RootNode.childNodes && i < RootNode.childNodes.length; ++i) {
@@ -185,12 +185,12 @@ function ShowXML(xmlHolderElement,RootNode,indent)
       var ContentElement = document.createElement('div');
       ContentElement.style.position = 'relative';
       ContentElement.style.left = NestingIndent+'px';			
-      AddTextNode(ContentElement,NodeContent ,'NodeValue') ;
+      AddTextNode(ContentElement,NodeContent ,'NodeValue emh-xml-viewer') ;
       TagElement.appendChild(ContentElement);
     }			
-    AddTextNode(TagElement,'  </','Utility') ;
-    AddTextNode(TagElement,RootNode.nodeName,'NodeName') ;
-    AddTextNode(TagElement,'>','Utility') ;
+    AddTextNode(TagElement,'  </','Utility emh-xml-viewer') ;
+    AddTextNode(TagElement,RootNode.nodeName,'NodeName emh-xml-viewer') ;
+    AddTextNode(TagElement,'>','Utility emh-xml-viewer') ;
     xmlHolderElement.appendChild(TagElement);	
   }
 	

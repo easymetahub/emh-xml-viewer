@@ -1,5 +1,4 @@
 <link rel="import" href="bower_components/polymer/polymer.html"/>
-<link href="XMLDisplay.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="XMLDisplay.js"></script>
 
 <dom-module id="emh-xml-viewer">
@@ -7,7 +6,42 @@
     <style>
       :host {
         display: block;
-        background-color: lightgrey;
+        background-color: var(--emh-xml-viewer-background-color, lightgrey);
+      }
+      .Utility {
+      color: var(--emh-xml-viewer-utility-color, black);
+      }	
+      .NodeName {
+      font-weight:bold;
+      color: var(--emh-xml-viewer-node-name-color, #800080);	
+      }
+      .AttributeName 
+      {
+      font-weight:bold;
+      color: var(--emh-xml-viewer-attribute-name-color, black);
+      }
+      .AttributeValue
+      {
+      color: var(--emh-xml-viewer-attribute-value-color, blue);
+      }
+      .NodeValue
+      {
+      color: var(--emh-xml-viewer-node-value-color, black);
+      }
+      .Element {
+      border-left-color:var(--emh-xml-viewer-element-border-color, #00FF66);
+      border-left-width:thin;
+      border-left-style:solid;
+      padding-top:0px;
+      margin-top:10px;
+      }
+      .Clickable {	
+      font-weight:900;
+      font-size:large;
+      color: var(--emh-xml-viewer-clickable-color, #800080);	
+      cursor:pointer;
+      
+      vertical-align:middle;
       }
     </style>
     <div id="XMLHolder"></div>
