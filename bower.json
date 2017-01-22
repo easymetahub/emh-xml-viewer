@@ -1,5 +1,18 @@
 {
   "name": "emh-xml-viewer",
+  "version": "0.9.0",
+  "description": "XML Viewer with expand/collapse for the nodes",
+  "authors": [
+    "Easy Meta Hub",
+    "Loren Cahlander",
+    "Lev Muchnik"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer",
+    "XML"
+  ],
   "main": "emh-xml-viewer.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0"
