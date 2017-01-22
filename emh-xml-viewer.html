@@ -3,7 +3,7 @@
 
 <dom-module id="emh-xml-viewer">
   <template>
-    <style>
+    <style is="custom-style">
       :host {
         display: block;
         background-color: var(--emh-xml-viewer-background-color, lightgrey);
@@ -53,16 +53,26 @@
       is: 'emh-xml-viewer',
 
       properties: {
+        /* The URL to the XML file for the XML Viewer to load from. */
         url: {
           type: String,
           notify: true, 
           observer: '_urlChanged'
+        },
+        /* The XML file encoded as a string for the XML Viewer to load. */
+        string: {
+          type: String,
+          notify: true, 
+          observer: '_stringChanged'
         }
       },
       _urlChanged: function() {
         LoadXML(this.$.XMLHolder, this.url);
+      },
+      _stringChanged: function() {
+        LoadXMLString(this.$.XMLHolder, this.string);
       }
-
+      
     });
   </script>
 </dom-module>
