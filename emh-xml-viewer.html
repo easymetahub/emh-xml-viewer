@@ -1,0 +1,34 @@
+<link rel="import" href="bower_components/polymer/polymer.html"/>
+<link href="XMLDisplay.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="XMLDisplay.js"></script>
+
+<dom-module id="emh-xml-viewer">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background-color: lightgrey;
+      }
+    </style>
+    <div id="XMLHolder"></div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'emh-xml-viewer',
+
+      properties: {
+        url: {
+          type: String,
+          notify: true, 
+          observer: '_urlChanged'
+        }
+      },
+      _urlChanged: function() {
+        LoadXML(this.$.XMLHolder, this.url);
+      }
+
+    });
+  </script>
+</dom-module>
