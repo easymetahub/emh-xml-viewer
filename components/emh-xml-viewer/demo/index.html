@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>emh-xml-viewer demo</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes"/>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html"/>
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html"/>
+
+    <link rel="import" href="../emh-xml-viewer.html"/>
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered600 {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered600">
+      <h3>Basic emh-xml-viewer Demo</h3>
+      <demo-snippet>
+        <template>
+          <emh-xml-viewer string="<foo><bar>AA</bar></foo>"></emh-xml-viewer>
+        </template>
+      </demo-snippet>
+      <demo-snippet>
+        <template>
+          <emh-xml-viewer url="test.xml"></emh-xml-viewer>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>
