@@ -1,6 +1,6 @@
 {
   "name": "emh-xml-viewer",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "XML Viewer with expand/collapse for the nodes",
   "authors": [
     "Easy Meta Hub",
