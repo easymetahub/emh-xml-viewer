@@ -1,4 +1,4 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/easymetahub/emh-xml-viewer)
 
 # \<emh-xml-viewer\>
 
@@ -10,7 +10,7 @@ This is a polymer wrapper of a javascript based XML Viewer created by Lev Muchni
 ## Installation
 
 ```
-bower install easymetahub/emh-xml-viewer
+bower install easymetahub/emh-xml-viewer --save
 ```
 
 ## Usage
